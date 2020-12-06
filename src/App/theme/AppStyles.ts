@@ -2,8 +2,13 @@ import { createStyles, makeStyles, Theme } from "@material-ui/core";
 const AppStyles = (makeStyles((theme: Theme) =>
     createStyles({
         root: {
-            paddingTop: `64px`,
-            height: "100%" 
+            [theme.breakpoints.down('xs')]: {
+                paddingTop: `3.5em`,
+            },
+            [theme.breakpoints.up('sm')]: {
+                paddingTop: `4em`,
+            },
+            height: "100%"
         },
         card: {
             height: "100%",
@@ -11,7 +16,7 @@ const AppStyles = (makeStyles((theme: Theme) =>
             overflowY: "auto",
         },
         box: {
-            height: "3000px",
+            height: "300em",
             width: "100%",
         }
     }),

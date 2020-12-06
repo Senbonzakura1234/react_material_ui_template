@@ -12,7 +12,8 @@ const MenuDesktop = (prop: MenuDesktopProp) => {
     return (
         <Menu
             anchorEl={prop.anchorEl}
-            anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+            anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+            getContentAnchorEl={null}
             id={prop.menuId}
             keepMounted
             transformOrigin={{ vertical: 'top', horizontal: 'right' }}

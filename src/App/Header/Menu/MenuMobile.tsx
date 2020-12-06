@@ -17,7 +17,8 @@ const MenuMobile = (prop: MenuMobileProp) => {
     return (
         <Menu
             anchorEl={prop.mobileMoreAnchorEl}
-            anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+            anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+            getContentAnchorEl={null}
             id={prop.mobileMenuId}
             keepMounted
             transformOrigin={{ vertical: 'top', horizontal: 'right' }}
