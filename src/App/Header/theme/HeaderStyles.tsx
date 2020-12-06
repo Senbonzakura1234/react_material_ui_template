@@ -7,7 +7,10 @@ const HeaderStyles = makeStyles((theme: Theme) =>
         },
         homeButton: {
             '&:forcus > span': {
-                color: "white"
+                color: theme.palette.common.white
+            },
+            '&:hover > span': {
+                color: theme.palette.common.white
             },
             marginRight: theme.spacing(2),
         },
