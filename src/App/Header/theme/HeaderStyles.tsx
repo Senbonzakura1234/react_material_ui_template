@@ -1,42 +1,43 @@
-import { createStyles, fade, makeStyles, Theme } from "@material-ui/core";
+import { createStyles, fade, makeStyles } from "@material-ui/core";
+import RootTheme from "../../../theme/RootTheme";
 
-const HeaderStyles = makeStyles((theme: Theme) =>
+const HeaderStyles = makeStyles(() =>
     createStyles({
         grow: {
             flexGrow: 1,
         },
         homeButton: {
             '&:forcus > span': {
-                color: theme.palette.common.white
+                color: RootTheme.palette.common.white
             },
             '&:hover > span': {
-                color: theme.palette.common.white
+                color: RootTheme.palette.common.white
             },
-            marginRight: theme.spacing(2),
+            marginRight: RootTheme.spacing(2),
         },
         title: {
             display: 'none',
-            [theme.breakpoints.up('sm')]: {
+            [RootTheme.breakpoints.up('sm')]: {
                 display: 'block',
             },
         },
         search: {
             position: 'relative',
-            borderRadius: theme.shape.borderRadius,
-            backgroundColor: fade(theme.palette.common.white, 0.15),
+            borderRadius: RootTheme.shape.borderRadius,
+            backgroundColor: fade(RootTheme.palette.common.white, 0.15),
             '&:hover': {
-                backgroundColor: fade(theme.palette.common.white, 0.25),
+                backgroundColor: fade(RootTheme.palette.common.white, 0.25),
             },
-            marginRight: theme.spacing(2),
+            marginRight: RootTheme.spacing(2),
             marginLeft: 0,
             width: '100%',
-            [theme.breakpoints.up('sm')]: {
-                marginLeft: theme.spacing(3),
+            [RootTheme.breakpoints.up('sm')]: {
+                marginLeft: RootTheme.spacing(3),
                 width: 'auto',
             },
         },
         searchIcon: {
-            padding: theme.spacing(0, 2),
+            padding: RootTheme.spacing(0, 2),
             height: '100%',
             position: 'absolute',
             pointerEvents: 'none',
@@ -48,24 +49,24 @@ const HeaderStyles = makeStyles((theme: Theme) =>
             color: 'inherit',
         },
         inputInput: {
-            padding: theme.spacing(1, 1, 1, 0),
+            padding: RootTheme.spacing(1, 1, 1, 0),
             // vertical padding + font size from searchIcon
-            paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
-            transition: theme.transitions.create('width'),
+            paddingLeft: `calc(1em + ${RootTheme.spacing(4)}px)`,
+            transition: RootTheme.transitions.create('width'),
             width: '100%',
-            [theme.breakpoints.up('md')]: {
+            [RootTheme.breakpoints.up('md')]: {
                 width: '20ch',
             },
         },
         sectionDesktop: {
             display: 'none',
-            [theme.breakpoints.up('md')]: {
+            [RootTheme.breakpoints.up('md')]: {
                 display: 'flex',
             },
         },
         sectionMobile: {
             display: 'flex',
-            [theme.breakpoints.up('md')]: {
+            [RootTheme.breakpoints.up('md')]: {
                 display: 'none',
             },
         },

@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBar, IconButton, Toolbar, Typography } from '@material-ui/core';
+import { AppBar, Button, IconButton, Switch as SwitchInput, Toolbar, Typography } from '@material-ui/core';
 import { Home as HomeIcon } from '@material-ui/icons';
 import HeaderStyles from './theme/HeaderStyles';
 import MenuDesktop from './Menu/MenuDesktop';
@@ -8,6 +8,8 @@ import SectionDesktop from './Section/SectionDesktop';
 import SectionMobile from './Section/SectionMobile';
 import SearchBox from './SearchBox/SearchBox';
 import { Link } from 'react-router-dom';
+
+
 
 const Header = () => {
     const classes = HeaderStyles(), [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null),
@@ -35,7 +37,7 @@ const Header = () => {
 
     return (
         <div className={classes.grow}>
-            <AppBar position="fixed"  >
+            <AppBar position="fixed">
                 <Toolbar>
                     <IconButton edge="start" className={classes.homeButton}
                         color="inherit" aria-label="Home" component={Link} to="/">
@@ -49,7 +51,6 @@ const Header = () => {
                     <div className={classes.grow} />
                     <SectionDesktop className={classes.sectionDesktop}
                         menuId={menuId} handleProfileMenuOpen={handleProfileMenuOpen} />
-
                     <SectionMobile className={classes.sectionMobile}
                         handleMobileMenuOpen={handleMobileMenuOpen}
                         mobileMenuId={mobileMenuId} />

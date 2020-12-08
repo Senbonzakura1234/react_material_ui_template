@@ -12,11 +12,11 @@ import CardStyles from './theme/CardStyles';
 
 const CardItem = () => {
     const classes = CardStyles()
-    const [expanded, setExpanded] = useState(false);
+    // const [expanded, setExpanded] = useState(false);
 
-    const handleExpandClick = () => {
-        setExpanded(!expanded);
-    };
+    // const handleExpandClick = () => {
+    //     setExpanded(!expanded);
+    // };
 
     return (
         <Card className={classes.root} elevation={10}>
@@ -52,7 +52,7 @@ const CardItem = () => {
                 <IconButton aria-label="share">
                     <ShareIcon />
                 </IconButton>
-                <IconButton
+                {/* <IconButton
                     className={clsx(classes.expand, {
                         [classes.expandOpen]: expanded,
                     })}
@@ -61,9 +61,9 @@ const CardItem = () => {
                     aria-label="show more"
                 >
                     <ExpandMoreIcon />
-                </IconButton>
+                </IconButton> */}
             </CardActions>
-            <Collapse in={expanded} timeout="auto" unmountOnExit>
+            {/* <Collapse in={expanded} timeout="auto" unmountOnExit>
                 <CardContent>
                     <Typography paragraph>Method:</Typography>
                     <Typography paragraph>
@@ -89,7 +89,7 @@ const CardItem = () => {
                         Set aside off of the heat to let rest for 10 minutes, and then serve.
                     </Typography>
                 </CardContent>
-            </Collapse>
+            </Collapse> */}
         </Card>
     );
 };

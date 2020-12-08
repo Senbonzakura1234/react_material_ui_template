@@ -41,8 +41,8 @@ const RootTheme = createMuiTheme({
         },
         common: {
             white: "#f3e5f5",
-            black: "212121"
-        }
+            black: "#212121"
+        },
     },
 });
 

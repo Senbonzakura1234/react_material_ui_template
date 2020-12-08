@@ -1,6 +1,6 @@
 import { Grid, Container, ThemeProvider } from '@material-ui/core';
 import { observer } from 'mobx-react';
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import RootTheme from '../theme/RootTheme';
 import './../service/Intercepter.service'
@@ -14,12 +14,12 @@ const App = observer(() => {
         <BrowserRouter>
             <ThemeProvider theme={RootTheme}>
                 <Container disableGutters maxWidth={false} className={classes.root}>
-                    <Header />
+                    <Header/>
                     <Container maxWidth={false} className={classes.boxContainer} >
                         <Grid container justify="center" spacing={4}>
                             {
                                 new Array(8).fill(0).map((item, index) => (
-                                    <Grid item xs={6} md={4} lg={3} key={index}>
+                                    <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
                                         <CardItem/>
                                     </Grid>
                                 ))

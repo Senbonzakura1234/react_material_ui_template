@@ -1,5 +1,6 @@
-import { createStyles, makeStyles, Theme } from "@material-ui/core";
-const CardStyles = (makeStyles((theme: Theme) =>
+import { createStyles, makeStyles } from "@material-ui/core";
+import RootTheme from "../../../theme/RootTheme";
+const CardStyles = (makeStyles(() =>
     createStyles({
         root: {
             width: "100%",
@@ -11,16 +12,16 @@ const CardStyles = (makeStyles((theme: Theme) =>
         expand: {
             transform: 'rotate(0deg)',
             marginLeft: 'auto',
-            transition: theme.transitions.create('transform', {
-                duration: theme.transitions.duration.shortest,
+            transition: RootTheme.transitions.create('transform', {
+                duration: RootTheme.transitions.duration.shortest,
             }),
         },
         expandOpen: {
             transform: 'rotate(180deg)',
         },
         avatar: {
-            backgroundColor: theme.palette.error.dark,
-            color: theme.palette.common.white
+            backgroundColor: RootTheme.palette.error.dark,
+            color: RootTheme.palette.common.white
         },
     }),
 ));

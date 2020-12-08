@@ -1,26 +1,24 @@
-import { createStyles, makeStyles, Theme } from "@material-ui/core";
-const AppStyles = (makeStyles((theme: Theme) =>
+import { createStyles, makeStyles } from "@material-ui/core";
+import RootTheme from "../../theme/RootTheme";
+const AppStyles = (makeStyles(() =>
     createStyles({
         root: {
-            [theme.breakpoints.down('xs')]: {
+            [RootTheme.breakpoints.down('xs')]: {
                 paddingTop: `3.5em`,
             },
-            [theme.breakpoints.up('sm')]: {
+            [RootTheme.breakpoints.up('sm')]: {
                 paddingTop: `4em`,
             },
             height: "100%",
-            background: 
-            // theme.palette.type === "dark" ?
-                theme.palette.common.black 
-                // theme.palette.common.white
+            backgroundColor: RootTheme.palette.common.black
         },
         boxContainer: {
             height: "100%",
             width: "100%",
             overflowY: "auto",
-            paddingTop: theme.spacing(4),
-            paddingBottom: theme.spacing(4),
+            paddingTop: RootTheme.spacing(4),
+            paddingBottom: RootTheme.spacing(4),
         },
-    }),
+    })
 ));
 export default AppStyles;
