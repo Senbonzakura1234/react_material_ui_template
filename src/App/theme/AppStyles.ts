@@ -8,17 +8,19 @@ const AppStyles = (makeStyles((theme: Theme) =>
             [theme.breakpoints.up('sm')]: {
                 paddingTop: `4em`,
             },
-            height: "100%"
+            height: "100%",
+            background: 
+            // theme.palette.type === "dark" ?
+                theme.palette.common.black 
+                // theme.palette.common.white
         },
-        card: {
+        boxContainer: {
             height: "100%",
             width: "100%",
             overflowY: "auto",
+            paddingTop: theme.spacing(4),
+            paddingBottom: theme.spacing(4),
         },
-        box: {
-            height: "300em",
-            width: "100%",
-        }
     }),
 ));
 export default AppStyles;
